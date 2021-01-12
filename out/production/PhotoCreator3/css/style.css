@@ -1,0 +1,112 @@
+.button
+{
+    -fx-font-family: Arial;
+    -fx-font-size: 16;
+    -fx-background-color: transparent;
+    -fx-text-fill: white;
+}
+
+.button:hover
+{
+    -fx-background-color: #4661b7;
+    -fx-focus-color: #90aed6;
+}
+
+.button:pressed
+{
+    -fx-background-color: #90aed6;
+}
+
+.menu-button
+{
+    -fx-font-family: Arial;
+    -fx-font-size: 16px;
+    -fx-background-color: transparent;
+}
+
+.menu-button:hover
+{
+    -fx-background-color: #4661b7;
+}
+
+.menu-button:pressed
+{
+    -fx-background-color: #90aed6;
+}
+
+.context-menu {
+    -fx-background-color: #7375c4;
+    -fx-border-radius: 15px;
+    -fx-border-width: 2px;
+}
+
+.menu-button > .arrow-button {
+    -fx-padding: 0;
+}
+
+.menu-button > .arrow-button > .arrow {
+    -fx-padding: 0;
+}
+
+.menu-item{
+    -fx-padding: 1 5 1 5;
+    -fx-background-color: #7375c4;
+}
+
+.menu-item:hover{
+    -fx-background-color: #7375c4;
+}
+
+.menu .context-menu {
+    -fx-padding: 1 1 1 1;
+    -fx-background-color: transparent;
+}
+.menu-item >.label {
+    -fx-font-family: Arial;
+    -fx-font-size: 16;
+    -fx-background-color: transparent;
+}
+
+.menu >.label {
+    -fx-font-family: Arial;
+    -fx-font-size: 16;
+    -fx-background-color: transparent;
+}
+
+.slider{
+}
+
+.image_field
+{
+    -fx-background-color: linear-gradient(to bottom left, #48387c, #7375c4, #82b5d9);
+}
+
+.color-picker
+{
+    -fx-text-fill: white;
+    -fx-background-color: transparent;
+}
+.color-picker > .arrow-button {
+    -fx-padding: 0;
+}
+
+.color-picker > .arrow-button > .arrow {
+    -fx-padding: 0;
+}
+
+.Vbox {
+    -fx-background-color: linear-gradient(to top left, #5c79e4, #6678bb, #82b5d9);
+}
+
+.Anchor-tab {
+    -fx-background-color: rgba(0, 0, 0, 0);
+
+}
+.border
+{
+    -fx-background-color: linear-gradient(to top left, #5c79e4, #6678bb, #82b5d9);
+}
+
+
+
+
