@@ -26,7 +26,7 @@ public class Histogram extends Filter{
                 int[] histogram = getHistogram();
                 GraphicsContext gc = initGraphicContext(canvas);
 
-                int maxHeight = (maxVal(histogram) / 200) + 1;
+                int maxHeight = (int) ((maxVal(histogram) / canvas.getHeight()) + 1);
 
                 for (int i = 0; i < histogram.length; i++){
                     drawLine(gc, i, histogram[i], maxHeight);
@@ -44,6 +44,7 @@ public class Histogram extends Filter{
 
     private static GraphicsContext initGraphicContext(Canvas canvas){
         GraphicsContext gc = canvas.getGraphicsContext2D();
+        gc.clearRect(0, 0, canvas.getWidth(), canvas.getHeight());
         gc.setFill(Color.rgb(159, 166, 215, 0.01));
         gc.fillRect(0, 0, 256, 200);
         gc.setLineWidth(2.0);
