@@ -139,7 +139,7 @@ public class CaptureWindow{
         if (width > 0 & height > 0){
             WritableImage writableImage = new WritableImage(width, height);
             robot.getScreenCapture(writableImage, minXGlobal, minYGlobal, width, height);
-            imageViewResizeable.setViewport(new Rectangle2D(0, 0, width, height));
+            //imageViewResizeable.setViewport(new Rectangle2D(0, 0, width, height));
             imageViewResizeable.setImage(writableImage);
             photoTransformable.setImage(writableImage);
         }

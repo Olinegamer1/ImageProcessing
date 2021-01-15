@@ -7,8 +7,6 @@ import javafx.scene.image.PixelReader;
 import javafx.scene.image.WritableImage;
 import org.apache.commons.math3.linear.*;
 
-import java.util.Arrays;
-
 import static org.apache.commons.math3.util.FastMath.pow;
 import static org.apache.commons.math3.util.FastMath.abs;
 import static org.apache.commons.math3.util.FastMath.floor;
@@ -101,8 +99,8 @@ public class BicubicInterpolationTransformation extends Transformation {
     private static int getCurrentColor(PixelReader pixelReader, int x, int y, int color){
         switch (color){
             case 0 -> { return (int) (pixelReader.getColor(abs(x), abs(y)).getRed() * 255); }
-            case 1 -> { return (int) (pixelReader.getColor(abs(x), abs(y)).getBlue() * 255); }
-            case 2 -> { return  (int) (pixelReader.getColor(abs(x),abs(y)).getGreen() * 255);}
+            case 1 -> { return  (int) (pixelReader.getColor(abs(x),abs(y)).getGreen() * 255);}
+            case 2 -> { return (int) (pixelReader.getColor(abs(x), abs(y)).getBlue() * 255); }
         }
         return 0;
     }

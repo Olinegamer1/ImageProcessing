@@ -4,7 +4,10 @@ import imageFilters.*;
 import imageTransformation.BilinearInterpolationTransformation;
 import imageTransformation.NearestNeighborTransformation;
 import imageTransformation.BicubicInterpolationTransformation;
+import imageTransformation.Rotate;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.geometry.Rectangle2D;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.control.*;
 import javafx.scene.image.ImageView;
@@ -82,6 +85,8 @@ public class Controller {
     private Slider bilinearInterpolationScaleSlider;
     @FXML
     private Slider bicubicInterpolationScaleSlider;
+    @FXML
+    private TextField rotateValue;
 
     @FXML
     void handleNearestNeighbor() {
@@ -200,8 +205,18 @@ public class Controller {
     }
     @FXML
     void handleBicubicInterpolationScale() {
+        imageFiledResizable.setViewport(new Rectangle2D(0, 0, imageFiledResizable.getImage().getWidth(),
+                imageFiledResizable.getImage().getHeight()));
         BicubicInterpolationTransformation.applyTransformation(imageFiledResizable, bicubicInterpolationScaleSlider);
     }
+
+    @FXML
+    void handleRotateImage() {
+        imageFiledResizable.setViewport(null);
+        Rotate.applyTransformation(0, 0, imageFiledResizable, rotateValue);
+    }
+
+
 
     @FXML
     void handleImageDelete() {
@@ -221,5 +236,9 @@ public class Controller {
     @FXML
     public void handleCancelChanges() {
         manager.cancelChanges(imageField);
+    }
+
+    public void handleAlignText() {
+        AlignText.applyFilter(imageField, indicator);
     }
 }
