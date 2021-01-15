@@ -7,7 +7,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.paint.Color;
 
 public class GammaConverter extends Filter {
-    public static synchronized void applyFilter(Slider gammaSlider, ImageView imageField, ProgressIndicator indicator){
+    public static synchronized void applyFilter(Slider gammaSlider, ImageView imageField, ProgressIndicator indicator) {
         if (imageField.getImage() == null){
             return;
         }

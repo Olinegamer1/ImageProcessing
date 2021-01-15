@@ -1,7 +1,9 @@
 package controllers;
 
 import imageFilters.*;
+import imageTransformation.BilinearInterpolationTransformation;
 import imageTransformation.NearestNeighborTransformation;
+import imageTransformation.BicubicInterpolationTransformation;
 import javafx.fxml.FXML;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.control.*;
@@ -76,6 +78,10 @@ public class Controller {
     private Slider q4Border;
     @FXML
     private ProgressIndicator indicator;
+    @FXML
+    private Slider bilinearInterpolationScaleSlider;
+    @FXML
+    private Slider bicubicInterpolationScaleSlider;
 
     @FXML
     void handleNearestNeighbor() {
@@ -117,6 +123,11 @@ public class Controller {
     }
 
     @FXML
+    void handleBinClustering() {
+        BinClustering.applyFilter(imageField, indicator);
+    }
+
+    @FXML
     private void handleHistogram() {
         Histogram.drawHistogram(histogram);
     }
@@ -132,7 +143,7 @@ public class Controller {
     }
 
     @FXML
-    private void handleNegative(){
+    private void handleNegative() {
         Negative.applyFilter(negativeValue, imageField, indicator);
     }
 
@@ -170,7 +181,6 @@ public class Controller {
     @FXML
     void handleSelectArea(){
         canvas.setDisable(!canvas.isDisable());
-        imageFiledResizable.setImage(null);
         captureWindow.showWindow(canvas, imageFiledResizable);
     }
 
@@ -182,6 +192,15 @@ public class Controller {
     @FXML
     void handleSolar() {
         Solar.applyFilter(imageField, indicator);
+    }
+
+    @FXML
+    void handleBilinearInterpolationScale(){
+        BilinearInterpolationTransformation.applyTransformation(imageFiledResizable, bilinearInterpolationScaleSlider);
+    }
+    @FXML
+    void handleBicubicInterpolationScale() {
+        BicubicInterpolationTransformation.applyTransformation(imageFiledResizable, bicubicInterpolationScaleSlider);
     }
 
     @FXML

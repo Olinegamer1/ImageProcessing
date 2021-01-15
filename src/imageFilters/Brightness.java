@@ -7,7 +7,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.paint.Color;
 
 public class Brightness extends Filter {
-    public static synchronized void applyFilter (Slider brightnessSlider, ImageView imageField, ProgressIndicator indicator){
+    public static synchronized void applyFilter (Slider brightnessSlider, ImageView imageField, ProgressIndicator indicator) {
         if (imageField.getImage() == null){
             return;
         }

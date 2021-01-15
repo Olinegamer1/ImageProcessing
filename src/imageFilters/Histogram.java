@@ -3,23 +3,10 @@ package imageFilters;
 import javafx.concurrent.Task;
 import javafx.scene.canvas.Canvas;
 import javafx.scene.canvas.GraphicsContext;
-import javafx.scene.image.PixelReader;
 import javafx.scene.paint.Color;
 
 public class Histogram extends Filter{
-    private static int[] getHistogram (){
-        PixelReader pixelReader = photo.getPixelReader();
-        int[] histogram = new int[256];
-        for (int j = 0; j < photo.getHeight(); j++) {
-            for (int i = 0; i < photo.getWidth(); i++) {
-                Color color = pixelReader.getColor(i, j);
-                histogram[lum(color)]++;
-            }
-        }
-        return histogram;
-    }
-
-    public static void drawHistogram (Canvas canvas){
+    public static void drawHistogram (Canvas canvas) {
         Task<Void> task = new Task<>() {
             @Override
             protected Void call() {

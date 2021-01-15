@@ -1,0 +1,18 @@
+<component name="libraryTable">
+  <library name="au.id.tmm.probability:probability-core-apache-math_2.13:0.2.0" type="repository">
+    <properties maven-id="au.id.tmm.probability:probability-core-apache-math_2.13:0.2.0" />
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/probability-core-apache-math_2.13-0.2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/scala-library-2.13.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/probability-core_2.13-0.2.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-math3-3.6.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/lib/probability-core-apache-math_2.13-0.2.0-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/scala-library-2.13.0-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/probability-core_2.13-0.2.0-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/lib/commons-math3-3.6.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

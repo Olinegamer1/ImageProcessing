@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Median extends Filter{
-    public static synchronized void applyFilter (ImageView imageField, Slider medianSlider, ProgressIndicator indicator){
+    public static synchronized void applyFilter (ImageView imageField, Slider medianSlider, ProgressIndicator indicator) {
         if (imageField.getImage() == null){
             return;
         }

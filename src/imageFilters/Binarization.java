@@ -8,7 +8,7 @@ import javafx.scene.paint.Color;
 
 public class Binarization extends Filter {
 
-    public static synchronized void applyFilter(Slider binarySlider, ImageView imageField, ProgressIndicator indicator){
+    public static synchronized void applyFilter(Slider binarySlider, ImageView imageField, ProgressIndicator indicator) {
         if (imageField.getImage() == null){
             return;
         }

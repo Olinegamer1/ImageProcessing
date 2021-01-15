@@ -15,7 +15,19 @@ public abstract class Filter{
     protected static double currentProgress = 0;
 
     protected static int lum(Color color){
-        return (int) (0.3 * (color.getRed() * 255) + 0.59 * (color.getGreen() * 255) + 0.11 * (color.getBlue() * 255));
+        return (int) (0.299 * (color.getRed() * 255) + 0.587 * (color.getGreen() * 255) + 0.114 * (color.getBlue() * 255));
+    }
+
+    protected static int[] getHistogram (){
+        PixelReader pixelReader = photo.getPixelReader();
+        int[] histogram = new int[256];
+        for (int j = 0; j < photo.getHeight(); j++) {
+            for (int i = 0; i < photo.getWidth(); i++) {
+                Color color = pixelReader.getColor(i, j);
+                histogram[lum(color)]++;
+            }
+        }
+        return histogram;
     }
 
     protected static int[] getRgbFormatColor(Color color){

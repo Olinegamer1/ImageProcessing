@@ -7,7 +7,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.paint.Color;
 
 public class IncreaseDecreaseContrast extends Filter {
-    public static synchronized void applyFilter(Slider contrastRight, Slider contrastLeft, ImageView imageField, boolean decrease, ProgressIndicator indicator){
+    public static synchronized void applyFilter(Slider contrastRight, Slider contrastLeft, ImageView imageField, boolean decrease, ProgressIndicator indicator) {
         if (imageField.getImage() == null){
             return;
         }

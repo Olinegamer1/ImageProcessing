@@ -42,7 +42,7 @@
             <Rectangle2D />
          </viewport>
       </ImageView>
-      <Canvas fx:id="canvas" cache="true" cacheHint="QUALITY" disable="true" height="840.0" layoutX="267.0" layoutY="6.0" width="865.0">
+      <Canvas fx:id="canvas" cache="true" cacheHint="QUALITY" disable="true" height="840.0" layoutX="259.0" layoutY="6.0" width="865.0">
          <cursor>
             <Cursor fx:constant="CROSSHAIR" />
          </cursor>
@@ -360,6 +360,11 @@
                      </MenuButton>
                   </graphic>
                </MenuItem>
+               <MenuItem mnemonicParsing="false">
+                  <graphic>
+                     <Button mnemonicParsing="false" onAction="#handleBinClustering" text="Bin. Clustering" />
+                  </graphic>
+               </MenuItem>
             </items>
             <graphic>
                <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true" translateX="-45.0">
@@ -392,6 +397,16 @@
                <MenuItem mnemonicParsing="false" text="Nearest Neighbor">
                   <graphic>
                      <TextField fx:id="scaleValue" onAction="#handleNearestNeighbor" />
+                  </graphic>
+               </MenuItem>
+               <MenuItem mnemonicParsing="false" text="Bilinear interpolation">
+                  <graphic>
+                     <Slider fx:id="bilinearInterpolationScaleSlider" blockIncrement="0.1" max="5.0" min="0.1" onMouseReleased="#handleBilinearInterpolationScale" />
+                  </graphic>
+               </MenuItem>
+               <MenuItem mnemonicParsing="false" text="Bicubic interpolation">
+                  <graphic>
+                     <Slider fx:id="bicubicInterpolationScaleSlider" blockIncrement="0.1" max="5.0" min="0.1" onMouseReleased="#handleBicubicInterpolationScale" />
                   </graphic>
                </MenuItem>
            </items>

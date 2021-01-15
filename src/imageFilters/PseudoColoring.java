@@ -8,7 +8,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.paint.Color;
 
 public class PseudoColoring extends Filter {
-    public static synchronized void applyFilter(ImageView imageField, ColorPicker one, ColorPicker two, ColorPicker three, ColorPicker four, ColorPicker five, ColorPicker six, ProgressIndicator indicator, Slider... slidersQ ){
+    public static synchronized void applyFilter(ImageView imageField, ColorPicker one, ColorPicker two, ColorPicker three, ColorPicker four, ColorPicker five, ColorPicker six, ProgressIndicator indicator, Slider... slidersQ ) {
         if (imageField.getImage() == null){
             return;
         }

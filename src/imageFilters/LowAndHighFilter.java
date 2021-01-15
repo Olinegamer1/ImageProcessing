@@ -6,7 +6,7 @@ import javafx.scene.control.Slider;
 import javafx.scene.image.ImageView;
 
 public class LowAndHighFilter extends Filter {
-    public static synchronized void applyFilter (ImageView imageField, Slider lowAndHighFilterSlider, ProgressIndicator indicator){
+    public static synchronized void applyFilter (ImageView imageField, Slider lowAndHighFilterSlider, ProgressIndicator indicator) {
         if (imageField.getImage() == null){
             return;
         }

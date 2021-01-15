@@ -6,7 +6,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.paint.Color;
 
 public class GrayScale extends Filter {
-    public static synchronized void applyFilter(ImageView imageField, ProgressIndicator indicator){
+    public static synchronized void applyFilter(ImageView imageField, ProgressIndicator indicator) {
         if (imageField.getImage() == null){
             return;
         }
@@ -26,6 +26,7 @@ public class GrayScale extends Filter {
                     }
                 }
                 imageField.setImage(wImage);
+                photo.setImage(imageField.getImage());
                 wImage.cancel();
                 return null;
             }

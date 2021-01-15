@@ -8,5 +8,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="javafx" level="project" />
+    <orderEntry type="library" name="au.id.tmm.probability:probability-core-apache-math_2.13:0.2.0" level="project" />
   </component>
 </module>
